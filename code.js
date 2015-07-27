@@ -172,7 +172,7 @@ this.winnerText = " † DEAD †";
     }
   }
   
-  p.text(txt, (p.width-twidth)/2, p.height/12);
+  p.text(txt, (p.width-twidth)/2, p.height/2);
 };
 
 
@@ -284,8 +284,9 @@ p.keyPressed = function() {
     avatar.move(false);
     break;
     case "R": //'r'
-    globalReset(); 
-    killAvatarServer();
+    avatar.reset();
+    playerhistory.reset();
+
     break;
   }
 }
