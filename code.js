@@ -284,8 +284,7 @@ p.keyPressed = function() {
     avatar.move(false);
     break;
     case "R": //'r'
-    avatar.reset();
-    playerhistory.reset();
+    p.setup();
 
     break;
   }
