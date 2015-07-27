@@ -156,15 +156,13 @@ this.winnerText = " † DEAD †";
   var twidth = null;
   var textSize = 100; 
 
-  p.stroke("black");
-
   while(wrongsize){
     var txt = "";
-    p.textSize(textSize/4);
+    p.textSize(textSize);
     if(playerhistory.winner()&&avatar.alive()){
-      txt = "\ncontrols: [ w | x ] \n reset: [ r ] ";
+      txt = this.deadText;
     } else if (!avatar.alive()) {
-      txt = this.winnerText + "\ncontrols: [ w | x ] \nreset: [ r ] ";
+      // txt = this.winnerText;
     }
     twidth = p.textWidth(txt);
     if (twidth < p.width*.8){
@@ -174,7 +172,7 @@ this.winnerText = " † DEAD †";
     }
   }
   
-  p.text(txt, p.width*.1, p.width*.1);
+  p.text(txt, (p.width-twidth)/2, p.height/12);
 
 
 };
