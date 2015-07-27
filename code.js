@@ -220,7 +220,7 @@ this.sendHistory = function(){
 }
 
 this.killAvatarServer = function(){
-  callAPI("game/kill", function(data){}, {n:this.playername});
+  // callAPI("game/kill", function(data){}, {n:this.playername});
 }
 
 
